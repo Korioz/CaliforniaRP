@@ -1,0 +1,15 @@
+/\[no-git\]
+/*.dll
+/*.crt
+/*.key
+/*.json
+/*.dat
+*.idea
+*.exe
+*.sh
+*.cmd
+*.zip
+*.rar
+*.tar
+*.xz
+*.log

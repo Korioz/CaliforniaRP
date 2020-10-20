@@ -1,0 +1,205 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/app.css" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container">
+			<div id="result"></div>
+			<div class="topbar" id="topbar">
+				<div class="cont-p-1">
+					<div class="parale-1"></div>
+				</div>
+				<div class="cont-p-2">
+					<div class="parale-2"></div>
+				</div>
+				<div class="cont-p-3">
+					<div class="parale-3"></div>
+				</div>
+				<nav>
+					<div class="logo-topbar"></div>
+					<button class="btn-sign-out">Souhaitez-vous vous déconnecter ?
+						<i class="fas fa-sign-out-alt"></i>
+					</button>
+				</nav>
+			</div>
+			<div class="cont-content" id="general">
+				<div class="flex">
+					<div class="balance box-shadow">
+						<p>Bienvenue<br>
+							<span class="name"><span class="username1"></span></span>
+							<br>Vous avez<br>
+							<span class="money"><span class="curbalance"></span><span class="euro">$</span></span>
+						</p>
+					</div>
+					<div class="list-btn">
+						<button class="btn btn-blue" id="deposit">
+							<i class="far fa-money-bill-alt"></i>
+							<span class="far fa-money-bill-alt icon"></span>
+							<p>Déposer<br>
+								<span>votre liquide en lieu sûr</span>
+							</p>
+						</button>
+						<button class="btn btn-violet" id="withdraw">
+							<i class="far fa-credit-card"></i>
+							<span class="far fa-credit-card icon"></span>
+							<p>Retirer<br>
+								<span>de l'argent depuis votre compte</span>
+							</p>
+						</button>
+						<button class="btn btn-orange" id="transfer">
+							<i class="fas fa-exchange-alt"></i>
+							<span class="fas fa-exchange-alt icon"></span>
+							<p>Virement<br>
+								<span>à une connaissance</span>
+							</p>
+						</button>
+					</div>
+				</div>
+				<div class="flex">
+					<div class="pub box-shadow confiance">
+						<p>
+							<span>Vous nous faites confiance</span><br>
+							Le nombre de création de comptes Fleeca à augmenté de 25 % depuis 2016.
+						</p>
+						<div class="circle-confiance"></div>
+					</div>
+					<div class="pub box-shadow social">
+						<p>
+							<span>Vous êtes nombreux</span><br>
+							Merci de votre présence !
+						</p>
+						<div class="social-confiance"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cont-content" id="depositUI">
+				<div class="flex">
+					<div class="btn btn-blue banniere">
+						<p>Déposer votre argent<br>
+							<span>dans le lieu le plus sécurisé de toute la ville de Paris</span>
+						</p>
+					</div>
+					<button class="btn btn-grey back">
+						<i class="fas fa-bars"></i>
+						<span class="fas fa-arrow-left icon"></span>
+						<p>Retour<br>
+							<span>Au menu principal</span>
+						</p>
+					</button>
+				</div>
+				<form id="deposit1">
+					<div class="input-cont box-shadow">
+						<label>Combien souhaitez vous déposer ?</label>
+						<input id="amount" type="number" placeholder="0 €">
+					</div>
+					<button class="btn btn-green" type="submit">
+						<i class="fas fa-check"></i>
+						<span class="fas fa-check icon"></span>
+						<p>Valider<br>
+							<span>Votre dépôt</span>
+						</p>
+					</button>
+				</form>
+			</div>
+			<div class="cont-content" id="withdrawUI">
+				<div class="flex">
+					<div class="btn btn-violet banniere">
+						<p>Retirer de l'argent<br>
+							<span>depuis votre compte banquaire</span>
+						</p>
+					</div>
+					<button class="btn btn-grey back">
+						<i class="fas fa-bars"></i>
+						<span class="fas fa-arrow-left icon"></span>
+						<p>Retour<br>
+							<span>Au menu principal</span>
+						</p>
+					</button>
+				</div>
+				<form id="withdraw1">
+					<div class="input-cont box-shadow">
+						<label>Combien souhaitez vous retirer ?</label>
+						<input id="amountw" type="number" placeholder="0 €">
+					</div>
+					<button class="btn btn-green" type="submit">
+						<i class="fas fa-check"></i>
+						<span class="fas fa-check icon"></span>
+						<p>Valider<br>
+							<span>Votre retrait</span>
+						</p>
+					</button>
+				</form>
+			</div>
+			<div class="cont-content" id="transferUI">
+				<div class="flex">
+					<div class="btn btn-orange banniere">
+						<p>Faire un virement<br>
+							<span>à une connaissance</span>
+						</p>
+					</div>
+					<button class="btn btn-grey back">
+						<i class="fas fa-bars"></i>
+						<span class="fas fa-arrow-left icon"></span>
+						<p>Retour<br>
+							<span>Au menu principal</span>
+						</p>
+					</button>
+				</div>
+				<form id="transfer1">
+					<div class="double-input">
+						<div class="input-cont box-shadow">
+							<label>Combien souhaitez vous donner ?</label>
+							<input id="amountt" type="number" placeholder="0 €">
+						</div>
+						<div class="input-cont box-shadow">
+							<label>A qui souhaitez vous faire le virement ?</label>
+							<input id="to" type="text" placeholder="ID (/report)">
+						</div>
+					</div>
+					<button class="btn btn-green" type="submit">
+						<i class="fas fa-check"></i>
+						<span class="fas fa-check icon"></span>
+						<p>Valider<br>
+							<span>Votre virement</span>
+						</p>
+					</button>
+				</form>
+			</div>
+			<div class="cont-waiting" id="waiting">
+				<div class="content-waiting">
+					<div class="mainlogo"></div>
+					<p>
+						<span>Veuillez</span> vous connecter a votre compte FLEECA BANK<br>
+						Grâce <span>à</span> votre empreinte digitale
+					</p>
+					<div id="fingerprint-content">
+						<div class="fingerprint-default"></div>
+						<div class="fingerprint-active"></div>
+						<div class="fingerprint-bar"></div>
+					</div>
+				</div>
+				<div class="bg-waiting">
+					<div class="cont-p-4">
+						<div class="parale-4"></div>
+					</div>
+					<div class="cont-p-5">
+						<div class="parale-5"></div>
+					</div>
+					<div class="cont-p-6">
+						<div class="parale-6"></div>
+					</div>
+					<div class="cont-p-7">
+						<div class="parale-7"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="nui://game/ui/jquery.js"></script>
+		<script src="js/app.js"></script>
+		<script type="text/javascript"></script>
+	</body>
+</html>

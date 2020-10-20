@@ -1,0 +1,174 @@
+﻿* {
+	padding: 0;
+	margin: 0;
+	font-family: bebas_neuelight;
+}
+
+strong {
+	font-family: bebas_neueregular;
+	font-weight: 400;
+}
+
+#infos {
+	position: absolute;
+	top: 45px;
+	right: 15px;
+	width: 235px;
+}
+
+.info img.badge {
+	position: absolute;
+	height: 32px;
+	width: 32px;
+	float: left;
+	margin-left: -32px;
+}
+
+.info .container {
+	position: relative;
+	width: 235px;
+	height: 32px;
+	margin-bottom: 5px;
+	background-color: rgba(46, 46, 46, 0.6);
+}
+
+.info .container .state {
+	position: absolute;
+	overflow: hidden;
+	width: 225px;
+	top: 6px;
+	left: 10px;
+	color: #d2d2d2;
+	font-size: 18px;
+	white-space: nowrap;
+	letter-spacing: 1px;
+	text-align: left;
+	text-overflow: ellipsis;
+	text-shadow: 1px 1px 2px black;
+}
+
+.info .container .bar {
+	position: absolute;
+	height: 1px;
+	width: 267px;
+	top: 31px;
+	left: -32px;
+}
+
+.info .container #cash.bar {
+	background: linear-gradient(90deg, rgba(92,107,34,1) 0%, rgba(156,184,55,1) 40%, rgba(156,184,55,1) 60%, rgba(92,107,34,1) 100%);
+}
+
+.info .container #dirtycash.bar {
+	background: linear-gradient(90deg, rgba(149,60,60,1) 0%, rgba(211,98,98,1) 40%, rgba(211,98,98,1) 60%, rgba(149,60,60,1) 100%);
+}
+
+.info .container #bank.bar {
+	background: linear-gradient(90deg, rgba(22,90,114,1) 0%, rgba(58,213,231,1) 40%, rgba(58,213,231,1) 60%, rgba(22,90,114,1) 100%);
+}
+
+.info .container #job.bar {
+	background: linear-gradient(90deg, rgba(91,91,91,1) 0%, rgba(215,215,215,1) 40%, rgba(215,215,215,1) 60%, rgba(91,91,91,1) 100%);
+}
+
+.info img.subbadge {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	float: left;
+	margin-left: 14px;
+	margin-top: 4px;
+}
+
+.info .container .subcontainer {
+	position: absolute;
+	height: 20px;
+	width: 200px;
+	left: 35px;
+	top: 32px;
+	background: url(../img/job2bar.png);
+}
+
+.info .container .subcontainer .state {
+	position: absolute;
+	overflow: hidden;
+	font-size: 12px;
+	top: 3px;
+	left: 32px;
+	width: 121px;
+	white-space: nowrap;
+	letter-spacing: 1px;
+	text-overflow: ellipsis;
+}
+
+#statuts {
+	display: grid;
+	position: absolute;
+	float: left;
+	text-align: right;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 10px 25px;
+	bottom: 10px;
+	right: 15px;
+	width: 229px;
+}
+
+.statut img.icon {
+	position: relative;
+	height: 12px;
+	width: 12px;
+	float: left;
+	left: -15px;
+	filter: drop-shadow(0px 0px 1px black);
+}
+
+.statut .container {
+	position: relative;
+	height: 12px;
+	border-radius: 7px;
+	background-color: #00000096;
+	box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+}
+
+.statut .container .state {
+	display: block;
+	position: relative;
+	height: 10px;
+	max-width: 100px;
+	top: 1px;
+	left: 1px;
+	border-radius: 7px;
+	transition: 0.1s ease-in-out;
+}
+
+.statut .container #health.state {
+	background: linear-gradient(90deg, rgba(112,0,0,1) 0%, rgba(144,27,27,1) 33%, rgba(185,54,54,1) 66%, rgba(201,76,76,1) 100%);
+}
+
+.statut .container #armor.state {
+	background: linear-gradient(90deg, rgb(51, 51, 51) 0%, rgb(103, 103, 103) 33%, rgb(158, 158, 158) 66%, rgb(197, 197, 197) 100%);
+}
+
+.statut .container #thirst.state {
+	background: linear-gradient(90deg, rgba(1,42,159,1) 0%, rgba(0,70,193,1) 33%, rgba(0,142,217,1) 66%, rgba(0,205,255,1) 100%);
+}
+
+.statut .container #hunger.state {
+	background: linear-gradient(90deg, rgb(255, 188, 0) 0%, rgb(183, 197, 60) 33%, rgb(204, 255, 0) 66%, rgb(98, 255, 0) 100%);
+}
+
+@font-face {
+	font-family: 'bebas_neuelight';
+	src: url('../fonts/bebasneue-light-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'bebas_neueregular';
+	src: url('../fonts/bebasneue-regular-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

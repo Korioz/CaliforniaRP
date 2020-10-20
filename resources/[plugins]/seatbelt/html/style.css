@@ -1,0 +1,88 @@
+html {
+	overflow: hidden;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+#container {
+	position: absolute;
+	bottom: -50%;
+	right: 40px;
+	width: 35px;
+	height: 35px;
+	display: none;
+	flex-direction: column;
+}
+
+header {
+	width: 35px;
+	height: 35px;
+	opacity: 1.0;
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+}
+
+header img {
+	width: 35px;
+	height: 35px;
+	border-top-left-radius: 35px;
+	border-top-right-radius: 35px;
+}
+
+@-moz-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.blink-image {
+	-moz-animation: blink normal 1s infinite ease-in-out;
+	-webkit-animation: blink normal 1s infinite ease-in-out;
+	-ms-animation: blink normal 1s infinite ease-in-out;
+	animation: blink normal 1s infinite ease-in-out;
+}

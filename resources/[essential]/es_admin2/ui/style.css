@@ -1,0 +1,62 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300,100italic,100);
+
+html {
+	overflow-y: hidden;
+}
+
+#admin {
+	font-family: 'Roboto', sans-serif;
+	background: rgb(255, 75, 75);
+	color: white;
+	height: 80%;
+	width: 40%;
+	position: absolute;
+	top: 10%;
+	left: 30%;
+}
+
+#list {
+	display: inline-block;
+	margin-bottom: 100px;
+	width: 200px;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+.group_set {
+	display: inline-block;
+	padding: 10px;
+}
+
+.group_set button {
+	padding-left: 25px;
+	padding-right: 25px;
+	border: none;
+	margin-top: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: bold;
+}
+
+.group_set input {
+	display: block;
+}
+
+.group_set label {
+	display: block;
+}
+
+#selected {
+	position: absolute;
+	display: inline-block;
+}
+
+.player {
+	text-weight: bold;
+	text-indent: 10px;
+	padding: 5px;
+}
+
+.player.selected {
+	background: -webkit-linear-gradient(right, transparent 0%, rgb(141, 0, 0) 100%);
+}

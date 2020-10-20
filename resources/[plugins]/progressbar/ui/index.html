@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>progressbar</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			body {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="progressbar">
+			<div id="text"></div>
+			<svg>
+				<circle id="circle" r="30" cx="50" cy="50"></circle>
+			</svg>
+		</div>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+		<script>
+			var interval = null
+			
+			$(function () {
+				window.addEventListener('message', function (event) {
+					if (event.data.action == "show_progressbar") {
+						$('body').show();
+						StartCount(event.data.seconds)
+					} else if (event.data.action == "hide_progressbar") {
+						$('body').hide();
+
+						if (interval != null) {
+							clearInterval(interval);
+						}
+					}
+				});
+			});
+
+			function StartCount(count) {
+				var text = document.getElementById('text');
+				var circle = document.getElementById("circle");
+				var countdown = count;
+
+				if (count == null) {
+					countdown = 10;
+				}
+
+				circle.style.animation = "countdown " + countdown + "s linear infinite forwards";
+				text.textContent = Math.floor(countdown) + "s";
+				
+				interval = setInterval(function () {
+					if ((countdown > 0.09) && countdown != 0.0) {
+						countdown -= 0.01;
+						var decimal = Math.round(countdown * 10) / 10;
+						
+						if ((countdown - Math.floor(countdown) !== 0) == true) {
+							text.textContent = decimal + "s";
+						} else {
+							text.textContent = Math.floor(countdown) + "s";
+						}
+					} else {
+						clearInterval(interval);
+						$('body').hide();
+						$.post('http://progressbar/done');
+					};
+				}, 10);
+			}
+		</script>
+	</body>
+</html>

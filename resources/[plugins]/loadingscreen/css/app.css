@@ -1,0 +1,230 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: bebas_neueregular;
+	color: #dddddd;
+}
+
+.header {
+	position: absolute;
+	top: 0px;
+	width: 101%;
+	z-index: 9;
+	background-color: #000000b0;
+	-webkit-box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 1.0);
+	-moz-box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 1.0);
+	box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 1.0);
+}
+
+.particles {
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+}
+
+#slider {
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	z-index: 1;
+	box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.32);
+}
+
+img#inner {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -100px;
+	margin-top: -100px;
+	width: 200px;
+	height: 200px;
+	z-index: 50;
+	filter: drop-shadow(1px 1px 6px #0000004d);
+	-webkit-animation-name: logo;
+	animation-name: logo;
+	-webkit-animation-duration: 5s;
+	animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+#center {
+	width: 500px;
+	height: 70px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 10px;
+	background: url(../img/bottombar.png);
+	background-size: 242% 100%;
+	background-position: 54% 100%;
+}
+
+#footer p {
+	width: 300px;
+	margin-left: 110px;
+	text-align: center;
+	margin-top: 48px;
+	text-shadow: 0px 0px 2px black;
+	font-size: 20px;
+	font-family: bebas_neuelight;
+	transform: scale(1.6, 1);
+}
+
+.test {
+	background: url('../img/bottombar.png');
+	width: 100%;
+	height: 120px;
+}
+
+.header:after {
+	position: absolute;
+	display: block;
+	height: 3px;
+	width: 100%;
+	bottom: 0;
+	content: "";
+	background: -webkit-linear-gradient(left, #f36363 0%, #8fa0c4 100%, rgba(83, 0, 30, 1) 100%);
+	-webkit-box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.75);
+}
+
+.bloc1 {
+	padding: 12px 32px;
+	font-size: 23px;
+	line-height: 25px;
+	border-radius: 4px;
+	font-family: bebas_neuelight;
+	float: left;
+	text-shadow: 0px 0px 2px black;
+}
+
+@-webkit-keyframes blinker {
+	from {
+		opacity: 1.0;
+	}
+	to {
+		opacity: 0.0;
+	}
+}
+
+.blink {
+	text-decoration: blink;
+	-webkit-animation-name: blinker;
+	-webkit-animation-duration: 1.6s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-direction: alternate;
+}
+
+@-webkit-keyframes logo {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.07);
+		transform: scale(1.07);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes logo {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.07);
+		transform: scale(1.07);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+.bloc2 {
+	float: right;
+	font-size: 23px;
+	padding: 12px 32px;
+	font-family: bebas_neuelight;
+	text-shadow: 0px 0px 2px black;
+}
+
+.texteffect {
+	background: -webkit-linear-gradient(45deg, #f36363, #8fa0c4 80%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 0;
+	font-family: bebas_neuebold;
+	text-shadow: 0px 0px 0px transparent;
+	filter: drop-shadow(0px 0px 1px black);
+}
+
+@media screen and (max-width: 500px) {
+	.header a {
+		float: none;
+		display: block;
+		text-align: left;
+	}
+
+	.header-right {
+		float: none;
+	}
+}
+
+.background-image {
+	position: absolute;
+	background-size: cover;
+	left: 0;
+	top: 0;
+	width: 110%;
+	height: 110%;
+	-webkit-filter: blur(25px);
+	-moz-filter: blur(25px);
+	-o-filter: blur(25px);
+	-ms-filter: blur(25px);
+	filter: blur(25px);
+	transform: translate(-25px, -25px);
+	display: table;
+}
+
+@font-face {
+	font-family: 'bebas_neuelight';
+	src: url('../fonts/bebasneue-light-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-light-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'bebas_neueregular';
+	src: url('../fonts/bebasneue-regular-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'bebas_neuebold';
+	src: url('../fonts/bebasneue-bold-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

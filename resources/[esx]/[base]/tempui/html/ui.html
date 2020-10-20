@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="">
+		<link rel="stylesheet" href="css/app.css">
+	</head>
+	<body>
+		<div id="ui" style="display:none;">
+			<div id="infos" style="display:none;">
+				<div class="info">
+					<img class="badge" src="img/cash.png">
+					<div class="container">
+						<span class="state" id="cash"></span>
+						<div class="bar" id="cash"></div>
+					</div>
+				</div>
+				<div class="info">
+					<img class="badge" src="img/dirtycash.png">
+					<div class="container">
+						<span class="state" id="dirtycash"></span>
+						<div class="bar" id="dirtycash"></div>
+					</div>
+				</div>
+				<div class="info">
+					<img class="badge" src="img/bank.png">
+					<div class="container">
+						<span class="state" id="bank"></span>
+						<div class="bar" id="bank"></div>
+					</div>
+				</div>
+				<div class="info">
+					<img class="badge" src="img/job.png">
+					<div class="container">
+						<span class="state" id="job"></span>
+						<div class="bar" id="job"></div>
+						<div class="subcontainer">
+							<img class="subbadge" src="img/job2.png">
+							<span class="state" style="font-size: 12px;" id="job2"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="statuts" style="display:none;">
+				<div class="statut">
+					<img class="icon" src="img/health.png">
+					<div class="container">
+						<span class="state" style="width: 100%;" id="health"></span>
+					</div>
+				</div>
+				<div class="statut">
+					<img class="icon" src="img/armor.png">
+					<div class="container">
+						<span class="state" style="width: 100%;" id="armor"></span>
+					</div>
+				</div>
+				<div class="statut">
+					<img class="icon" src="img/thirst.png">
+					<div class="container">
+						<span class="state" style="width: 100%;" id="thirst"></span>
+					</div>
+				</div>
+				<div class="statut">
+					<img class="icon" src="img/hunger.png">
+					<div class="container">
+						<span class="state" style="width: 100%;" id="hunger"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

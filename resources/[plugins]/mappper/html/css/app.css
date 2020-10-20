@@ -1,0 +1,141 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+	font-family: 'Arial', 'Helvetica', 'Sans-Serf';
+	color: #fff;
+}
+
+#toolbox-right .toolbox {
+	display: none;
+}
+
+#wrapper {
+  min-height: 100%;
+  display: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: center;
+}
+
+
+#center {
+	display: flex;
+	flex-grow: 7;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+
+.toolbox {
+	background-color: #212121;
+	padding: 10px;
+}
+
+#toolbox-left {
+	border-right: 1px solid #000;
+}
+
+#toolbox-right {
+	border-bottom: 1px solid #000;
+	width: 20%;
+}
+
+#toolbox-right > .toolbox > div {
+	padding: 5px
+}
+
+
+#view {
+	flex-grow: 8;
+}
+
+.tool, .action {
+	width: 2em;
+	height: 2em;
+	border : 1px solid #bbb;
+	padding: 3px;
+	margin-bottom: 5px;
+	text-align: center;
+	color: #bbb;
+}
+
+.tool:hover, .action:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+.tool.selected {
+	border-color: red;
+	color       : red;
+}
+
+.tool.selected:hover {
+	cursor: default;
+}
+
+#crosshair {
+	display   : 'none';
+  position  : absolute;
+  top       : 50%;
+  left      : 50%;
+  transform: translate(-50%, -50%);
+  color     : #fff;
+  font-size : 2em;
+}
+
+.ui-autocomplete {
+  max-height: 800px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+input.ui-widge t{
+	vertical-align: middle;
+}
+
+.ui-spinner-input {
+  padding: 1px 0px !important;
+  margin: 0 !important;
+}
+
+select[name="object-list"] {
+	width: 100%;
+}
+
+input[name="object-name"] {
+	width: 100%;
+}
+
+.input-dialog {
+	display         : none;
+  position        : absolute;
+  top             : 50%;
+  left            : 50%;
+  transform       : translate(-50%, -50%);
+  background-color: #000;
+  font-size       : 2em;
+  border          : 0;
+  font-size       : 2em;
+  width           : 20%;
+  height:         : 75px;
+}
+
+.input-dialog input[name="name"] {
+	background-color: #282828;
+	color           : #fff;
+	width           : 100%;
+	height          : 75px;
+	line-height     : 75px;
+	font-size       : 1em;  
+}
+
+.toolbox[data-tool="list"] {
+	max-height: 95%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}

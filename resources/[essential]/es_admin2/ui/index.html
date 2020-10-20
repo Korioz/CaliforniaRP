@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+		<style>
+			#admin,
+			#exist {
+				display: none;
+			}
+		</style>
+
+		<script>
+			let selected = 0;
+			$(function () {
+				$(document).keyup(function (e) {
+					if (e.keyCode == 27) {
+						$("#admin").css('display', 'none')
+						$.post('http://es_admin2/close', JSON.stringify({}));
+					}
+				})
+				window.addEventListener('message', function (event) {
+					if (event.data.type == "open") {
+						$('#notexist').css('display', 'block')
+						$('#exist').css('display', 'none')
+						$("#admin").css('display', "block")
+						$('input').val("")
+
+						$('#list').empty()
+						for (let i in event.data.players) {
+							let player = event.data.players[i];
+							$('#list').append('<div class="player" id="player_' + player.id + '">' + player.name + '</div>')
+						}
+						$(".player").click(function () {
+							let id = $(this).attr('id').replace('player_', '')
+							selected = parseInt(id)
+
+							$('.player').removeClass('selected')
+							$(this).addClass('selected')
+
+							$('#exist').find('h1').text(selected + ", " + $(this).text())
+
+							$('#notexist').css('display', 'none')
+							$('#exist').css('display', 'block')
+						})
+					}
+				});
+				$("#select_users").click(() => {
+					$('#users').css('display', 'block')
+					$("#select_users").addClass("selected")
+					$("#select_users").blur()
+				})
+				$("#setgroup").click(function () {
+					$.post('http://es_admin2/set', JSON.stringify({
+						target: selected,
+						command: 'group',
+						param: $("#newgroup").val()
+					}));
+					$(this).blur()
+				})
+				$("#setlevel").click(function () {
+					$.post('http://es_admin2/set', JSON.stringify({
+						target: selected,
+						command: 'level',
+						param: $("#newlevel").val()
+					}));
+					$(this).blur()
+				})
+				$('button').click(function () {
+					$(this).blur()
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="admin">
+			<div id="main">
+				<div id="users">
+					<div id="list"></div>
+					<div id="selected">
+						<div id="notexist">
+							<h1>Sélectionner un joueur</h1>
+						</div>
+						<div id="exist">
+							<h1>Korioz</h1>
+							<div id="set">
+								<div class="group_set">
+									<label>Groupe</label>
+									<input id="newgroup" type="text" placeholder="Nouveau Groupe"></input>
+									<button id="setgroup">Appliquer</button>
+								</div>
+								<div class="group_set">
+									<label>Niveau de Permission</label>
+									<input id="newlevel" type="text" placeholder="Nouveau Niveau"></input>
+									<button id="setlevel">Appliquer</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

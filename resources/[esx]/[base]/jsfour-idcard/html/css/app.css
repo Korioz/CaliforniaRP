@@ -1,0 +1,107 @@
+@font-face {
+	font-family: justsignature;
+	src: url('../fonts/JustSignature.woff');
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-shadow: 0px 0px 11px #ffffffeb;
+	font-size: 12px;
+}
+
+#id-card {
+	display: none;
+	position: relative;
+	margin: 230px 50px 0 0;
+	float: right;
+	width: 548px;
+	height: 243px;
+	padding: 54px 17px 10px 144px;
+	background: url(../img/idcard.png);
+}
+
+img {
+	position: absolute;
+	left: 16px;
+	top: 7px;
+}
+
+#name {
+	font-weight: bolder;
+	font-size: 38px;
+	color: #ffffff;
+	margin-top: 16px;
+	margin-left: 61px;
+	font-family: bebas_neuethin;
+	letter-spacing: 3px;
+	font-style: italic;
+	text-shadow: 0px 0px 2px black;
+}
+
+#name b {
+	font-family: bebas_neuebold;
+}
+
+#inline {
+	position: absolute;
+	top: 149px;
+}
+
+#dob {
+	position: absolute;
+	left: 57px;
+	width: 100px;
+}
+
+#sex {
+	position: absolute;
+	left: 182px;
+}
+
+#height {
+	position: absolute;
+	left: 257px;
+	width: 60px;
+}
+
+#signature {
+	position: absolute;
+	bottom: 78px;
+	left: 452px;
+	color: #c7999c;
+	font-size: 10px;
+	text-transform: capitalize;
+	font-family: justsignature;
+}
+
+#licenses {
+	position: absolute;
+	top: 109px;
+	right: 33px;
+	width: 50px;
+}
+
+@font-face {
+	font-family: 'bebas_neuethin';
+	src: url('../fonts/bebasneue-thin-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-thin-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'bebas_neuebold';
+	src: url('../fonts/bebasneue-bold-webfont.woff2') format('woff2'),
+		url('../fonts/bebasneue-bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}

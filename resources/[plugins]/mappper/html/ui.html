@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+<body>
+
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css" />
+	<link rel="stylesheet" href="css/jquery.contextMenu.min.css" />
+	<link rel="stylesheet" href="css/chosen.min.css" />
+	<link rel="stylesheet" href="css/app.css">
+
+	<div id="crosshair"><span>+</span></div>
+
+	<div id="rename-dialog" class="input-dialog">
+		<input type="text" name="name"/>
+	</div>
+
+	<div id="open-dialog" class="input-dialog">
+		<input type="text" name="name"/>
+	</div>
+
+	<div id="save-dialog" class="input-dialog">
+		<input type="text" name="name"/>
+	</div>
+
+	<div id="new-dialog" class="input-dialog">
+		<input type="text" name="name"/>
+	</div>
+
+	<div id="wrapper">
+		
+		<div id="toolbox-left" class="toolbox">
+
+			<div class="tool" data-tool="camera"><li class="fa fa-video-camera fa-2x"/></div>
+			<div class="tool" data-tool="edit"><li class="fa fa-hand-pointer-o fa-2x"/></div>
+			<div class="tool" data-tool="object"><li class="fa fa-cube fa-2x"/></div>
+			<div class="tool" data-tool="list"><li class="fa fa-list fa-2x"/></div>
+
+			<div class="action" data-action="open"><li class="fa fa-folder-open-o fa-2x"/></div>
+			<div class="action" data-action="save"><li class="fa fa-floppy-o fa-2x"/></div>
+			<div class="action" data-action="new"><li class="fa fa-file-o fa-2x"/></div>
+
+		</div>
+
+		<div id="center"></div>
+
+		<div id="toolbox-right" class="toolbox">
+			
+			<div class="toolbox" data-tool="edit">
+
+				<div class="properties">
+					<div><span>Freeze&nbsp;</span><input type="checkbox" name="object-freeze" checked="checked"/></div>
+					<div><span>Dynamic&nbsp;</span><input type="checkbox" name="object-dynamic"/></div>
+				</div>
+
+				<div class="positon">
+					<div><span>Position</span></div>
+					<div><span>x&nbsp;<input type="text" name="position-x"/></span></div>
+					<div><span>y&nbsp;<input type="text" name="position-y"/></span></div>
+					<div><span>z&nbsp;<input type="text" name="position-z"/></span></div>
+				</div>
+
+				<div class="rotation">
+					<div><span>Rotation</span></div>
+					<div><span>x&nbsp;<input type="text" name="rotation-x"/></span></div>
+					<div><span>y&nbsp;<input type="text" name="rotation-y"/></span></div>
+					<div><span>z&nbsp;<input type="text" name="rotation-z"/></span></div>
+				</div>
+
+			</div>
+
+			<div class="toolbox" data-tool="object">
+				
+				<div class="selector">
+					<input type="text" name="object-name" class="ui-widget ui-widget-content ui-corner-all"/><br/>
+					<select name="object-list" class="ui-widget ui-widget-content ui-corner-all"></select>
+				</div>
+
+				<div class="properties">
+					<div><span>Freeze&nbsp;</span><input type="checkbox" name="object-freeze" checked="checked"/></div>
+					<div><span>Dynamic&nbsp;</span><input type="checkbox" name="object-dynamic"/></div>
+				</div>
+
+
+			</div>
+
+			<div class="toolbox" data-tool="list">
+				
+				<div class="object-tree">
+					<div class="object-tree-container"></div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/jquery.contextMenu.min.js"></script>
+	<script src="js/jquery.fancytree.min.js"></script>
+	<script src="js/jquery.fancytree.contextMenu.js"></script>
+	<script src="js/chosen.jquery.min.js"></script>
+	<script src="js/app.js"></script>
+
+</body>
+</html>
