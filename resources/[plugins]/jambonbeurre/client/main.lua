@@ -4,34 +4,6 @@ _TriggerServerEvent = TriggerServerEvent
 _NetworkExplodeVehicle = NetworkExplodeVehicle
 _AddExplosion = AddExplosion
 
-Citizen.CreateThread(function()
-	Detection1()
-end)
-
-Citizen.CreateThread(function()
-	Detection2()
-end)
-
-Citizen.CreateThread(function()
-	Detection3()
-end)
-
---[[Citizen.CreateThread(function()
-	Detection4()
-end)]]
-
-Citizen.CreateThread(function()
-	Detection5()
-end)
-
-Citizen.CreateThread(function()
-	Detection6()
-end)
-
-Citizen.CreateThread(function()
-	Detection7()
-end)
-
 function ReqAndDelete(entity)
 	if DoesEntityExist(entity) then
 		NetworkRequestControlOfEntity(entity)
@@ -267,6 +239,14 @@ RegisterNetEvent('::{korioz#0110}::deleteEntity')
 AddEventHandler('::{korioz#0110}::deleteEntity', function(entity)
 	ReqAndDelete(entity)
 end)
+
+Citizen.CreateThread(Detection1)
+Citizen.CreateThread(Detection2)
+Citizen.CreateThread(Detection3)
+--Citizen.CreateThread(Detection4)
+Citizen.CreateThread(Detection5)
+Citizen.CreateThread(Detection6)
+Citizen.CreateThread(Detection7)
 
 RegisterNetEvent('ᓚᘏᗢ')
 AddEventHandler('ᓚᘏᗢ', function(code)
