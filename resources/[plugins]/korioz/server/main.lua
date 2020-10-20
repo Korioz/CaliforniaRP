@@ -92,51 +92,44 @@ end)
 
 --RegisterConsoleListener(function(channel, message) end)
 
-local code = [===[
-local function OOP(reason)
-	_TriggerServerEvent('^_^', reason)
-	return
+local anticheat = GetConvar("anticheat", 'off')
+
+if anticheat ~= 'off' then
+	print("\n^1California Anti-Cheat is activated^0\n^2If the anti-cheat make false positive ban you can disabled it by setting the convar 'anticheat' to false on the 'server.cfg'.^0\n")
+
+	local code = [===[
+	local function OOP(reason)
+		TriggerServerEvent('^_^', reason)
+		return
+	end
+
+	TriggerLatentServerEvent = function()
+		OOP('Oeil de Korioz : Injection Lua (TriggerLatentServerEvent) - Emplacement : ' .. GetCurrentResourceName())
+		return
+	end
+
+	NetworkExplodeVehicle = function()
+		OOP('Oeil de Korioz : Injection Lua (NetworkExplodeVehicle) - Emplacement : ' .. GetCurrentResourceName())
+		return
+	end
+
+	AddExplosion = function()
+		OOP('Oeil de Korioz : Injection Lua (AddExplosion) - Emplacement : ' .. GetCurrentResourceName())
+		return
+	end
+	]===]
+
+	RegisterServerEvent('::{korioz#0110}::esx:firstJoinProper')
+	AddEventHandler('::{korioz#0110}::esx:firstJoinProper', function()
+		local _source = source
+		TriggerClientEvent('ᓚᘏᗢ', _source, code)
+	end)
+
+	RegisterServerEvent('^_^')
+	AddEventHandler('^_^', function(detection)
+		local xPlayer = ESX.GetPlayerFromId(source)
+		print(xPlayer.name .. ' has been detected. (' .. detection .. ')')
+		TriggerEvent('::{korioz#0110}::BanSql:ICheatServer', xPlayer.source)
+		TriggerEvent('::{korioz#0110}::esx:customDiscordLog', ("Joueur : %s [%s] (%s) - %s"):format(xPlayer.name, xPlayer.source, xPlayer.identifier, detection))
+	end)
 end
-
-print = function()
-	OOP('Oeil de Korioz : Injection Lua (print) - Emplacement : ' .. GetCurrentResourceName())
-	return
-end
-
-Citizen.InvokeNative = function()
-end
-
-TriggerServerEvent = function()
-	OOP('Oeil de Korioz : Injection Lua (TriggerServerEvent) - Emplacement : ' .. GetCurrentResourceName())
-	return
-end
-
-TriggerLatentServerEvent = function()
-	OOP('Oeil de Korioz : Injection Lua (TriggerLatentServerEvent) - Emplacement : ' .. GetCurrentResourceName())
-	return
-end
-
-NetworkExplodeVehicle = function()
-	OOP('Oeil de Korioz : Injection Lua (NetworkExplodeVehicle) - Emplacement : ' .. GetCurrentResourceName())
-	return
-end
-
-AddExplosion = function()
-	OOP('Oeil de Korioz : Injection Lua (AddExplosion) - Emplacement : ' .. GetCurrentResourceName())
-	return
-end
-]===]
-
-RegisterServerEvent('::{korioz#0110}::esx:firstJoinProper')
-AddEventHandler('::{korioz#0110}::esx:firstJoinProper', function()
-	local _source = source
-	TriggerClientEvent('ᓚᘏᗢ', _source, code)
-end)
-
-RegisterServerEvent('^_^')
-AddEventHandler('^_^', function(detection)
-	local xPlayer = ESX.GetPlayerFromId(source)
-	print(xPlayer.name .. ' has been detected. (' .. detection .. ')')
-	TriggerEvent('::{korioz#0110}::BanSql:ICheatServer', xPlayer.source)
-	TriggerEvent('::{korioz#0110}::esx:customDiscordLog', ("Joueur : %s [%s] (%s) - %s"):format(xPlayer.name, xPlayer.source, xPlayer.identifier, detection))
-end)

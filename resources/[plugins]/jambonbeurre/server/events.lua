@@ -1,3 +1,11 @@
+local anticheat = GetConvar("anticheat", 'off')
+
+Citizen.CreateThread(function()
+	if anticheat == 'off' then
+		StopResource(GetCurrentResourceName())
+	end
+end)
+
 TriggerEvent('::{korioz#0110}::esx:getSharedObject', function(obj) ESX = obj end)
 
 local events = {
