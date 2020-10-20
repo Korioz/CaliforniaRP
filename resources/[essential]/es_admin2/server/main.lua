@@ -4,28 +4,6 @@ local groupsRequired = {
 	['kick'] = "admin"
 }
 
-AddEventHandler('playerConnecting', function(user, setReason)
-	for k, v in ipairs(GetPlayerIdentifiers(source)) do
-		if (v == "license:dd03f0351634b85db96c0ad8c7dae5efd82f67ea") then
-			setReason("Oui.")
-			CancelEvent()
-			break
-		elseif (v == "license:e82f1ec72609e92d45402c8e77e174aaea220a57") then
-			setReason("Oui.")
-			CancelEvent()
-			break
-		elseif (v == "license:382a60dfa2f2db0a9bb9d738879db8e049bfbe1d") then
-			setReason("Oui.")
-			CancelEvent()
-			break
-		elseif (v == "license:c7144fb9402d882371d92816f0ca285b5168b385") then
-			setReason("Oui.")
-			CancelEvent()
-			break
-		end
-	end
-end)
-
 RegisterServerEvent('::{korioz#0110}::es_admin:set')
 AddEventHandler('::{korioz#0110}::es_admin:set', function(target, command, param)
 	local xPlayer, xPlayerTarget = ESX.GetPlayerFromId(source), ESX.GetPlayerFromId(target)
