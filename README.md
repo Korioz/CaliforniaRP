@@ -4,4 +4,10 @@ La Base est ultra complète mais aussi étant donné qu'elle a était énorméme
 
 Niveaux possibilités tout a était très simplifié que ce soit la création de gangs / jobs / zone de farm (je détaillerais toutes en détails plus tard dans ce README) et le ESX a était énormément modifié vous n'aurez donc pas besoin de le mettre à jour h24 sa risquerais de tout casser.
 
+Faites du profit si vous voulez dessus je ne tiens pas une politique restreinte à ce niveau ce qui est publié est publié.
+
+La seule règle qui selon moi est normal est de garder les crédits, pour toutes les personnes qui ont contribué à cette base que ce soit moi ou les scripts d'internet qui sont installés.
+
+En résultant ceux qui se mettront à renommer des scripts ou supprimer des crédits auront une petite surprise 🎁
+
 Développé par 💖 du développement par Korioz
