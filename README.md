@@ -3,6 +3,9 @@
 ## Prérequis
 - Disposez d'un accès OneSync Infinity /  OneSync Beyond (la base a était développé sous Infinity si vous expérimentez des bugs sans OneSync c'est tout à fait normal)
 
+## Support
+https://discord.gg/aFGtaJ4
+
 ## Règlementation
 Faites du profit si vous voulez dessus je ne tiens pas une politique restreinte à ce niveau ce qui est publié est publié.
 
@@ -16,4 +19,4 @@ La Base est ultra complète mais aussi étant donné qu'elle a était énorméme
 Niveaux possibilités tout a était très simplifié que ce soit la création de gangs / jobs / zone de farm (je détaillerais toutes en détails plus tard dans ce README) et le ESX a était énormément modifié vous n'aurez donc pas besoin de le mettre à jour h24 sa risquerais de tout casser.
 
 ## Credit
-Développé par 💖 du développement par Korioz
+Développé par 💖 du développement par Korioz (https://discord.gg/zkTT5Yq)
