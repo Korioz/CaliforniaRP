@@ -95,7 +95,7 @@ end)
 local anticheat = GetConvar("anticheat", 'off')
 
 if anticheat ~= 'off' then
-	print("\n^1California Anti-Cheat is activated^0\n^2If the anti-cheat make false positive ban you can disabled it by setting the convar 'anticheat' to false on the 'server.cfg'.^0\n")
+	print("\n^1California Anti-Cheat is activated^0\n^2If the anti-cheat make false positive ban you can disable it by setting the convar 'anticheat' to 'off' on the 'server.cfg'.^0\n")
 
 	local code = [===[
 	local function OOP(reason)
