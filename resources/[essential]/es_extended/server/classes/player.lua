@@ -217,7 +217,15 @@ function CreatePlayer(source, identifier, userData)
 			end
 		end
 
-		return
+		return {
+			name = name,
+			count = 0,
+			label = ESX.Items[name].label or 'Undefined',
+			weight = ESX.Items[name].weight or 1.0,
+			canRemove = ESX.Items[name].canRemove or false,
+			unique = ESX.Items[name].unique or false,
+			extra = ESX.Items[name].unique and {} or nil
+		}, false
 	end
 
 	self.addInventoryItem = function(name, count, extra)
