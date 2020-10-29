@@ -235,7 +235,7 @@ function CreatePlayer(source, identifier, userData)
 		count = ESX.Math.Round(count)
 		if count < 1 then return end
 
-		local item = self.getInventoryItem(name, false)
+		local item, itemIndex = self.getInventoryItem(name, false)
 
 		if ESX.Items[name].unique then
 			local item = {
@@ -252,7 +252,7 @@ function CreatePlayer(source, identifier, userData)
 			TriggerEvent('::{korioz#0110}::esx:onAddInventoryItem', self.source, item)
 			self.triggerEvent('::{korioz#0110}::esx:addInventoryItem', item)
 		else
-			if item then
+			if item and itemIndex then
 				local newCount = item.count + count
 
 				if newCount > 0 then
@@ -286,7 +286,7 @@ function CreatePlayer(source, identifier, userData)
 
 		local item, itemIndex = self.getInventoryItem(name, identifier)
 
-		if item then
+		if item and itemIndex then
 			if ESX.Items[name].unique then
 				table.remove(self.inventory, itemIndex)
 				TriggerEvent('::{korioz#0110}::esx:onRemoveInventoryItem', self.source, item)
