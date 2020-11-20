@@ -65,7 +65,10 @@ end)
 
 AddEventHandler('onResourceStart', function(resource)
 	if resource == GetCurrentResourceName() then
-		Citizen.Wait(1000)
+		while not ESX do
+			Wait(10)
+		end
+
 		local xPlayers = ESX.GetPlayers()
 
 		for i = 1, #xPlayers, 1 do
