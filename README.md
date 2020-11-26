@@ -16,7 +16,7 @@ La Base est ultra complète mais aussi étant donné qu'elle a était énorméme
 Niveaux possibilités tout a était très simplifié que ce soit la création de gangs / jobs / zone de farm et le ESX a était énormément modifié vous n'aurez donc pas besoin de le mettre à jour h24 sa risquerais de tout casser.
 
 ## Wiki
-Wiki de la base : [WIKI.md](https://github.com/Korioz/CaliforniaRP/blob/master/WIKI.md
+Wiki de la base : [WIKI.md](https://github.com/Korioz/CaliforniaRP/blob/master/WIKI.md)
 
 ## Credit
 Développé par 💖 du développement par Korioz (https://discord.gg/zkTT5Yq)
