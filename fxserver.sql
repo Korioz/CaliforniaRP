@@ -709,16 +709,16 @@ CREATE TABLE IF NOT EXISTS `phone_users_contacts` (
 /*!40000 ALTER TABLE `phone_users_contacts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `phone_users_contacts` ENABLE KEYS */;
 
--- Listage de la structure de la table fxserver. playerstattoos
-CREATE TABLE IF NOT EXISTS `playerstattoos` (
+-- Listage de la structure de la table fxserver. playersTattoos
+CREATE TABLE IF NOT EXISTS `playersTattoos` (
   `identifier` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `tattoos` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`identifier`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
--- Listage des données de la table fxserver.playerstattoos : ~8 rows (environ)
-/*!40000 ALTER TABLE `playerstattoos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `playerstattoos` ENABLE KEYS */;
+-- Listage des données de la table fxserver.playersTattoos : ~8 rows (environ)
+/*!40000 ALTER TABLE `playersTattoos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `playersTattoos` ENABLE KEYS */;
 
 -- Listage de la structure de la table fxserver. properties
 CREATE TABLE IF NOT EXISTS `properties` (
