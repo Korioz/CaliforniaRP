@@ -253,8 +253,8 @@ ESX.AddGroupCommand('sqlunban', 'admin', function(source, args, user)
 		}, function(data)
 			if data[1] then
 				DeleteBan(data[1].licenseid, function()
-					SendMessage(source, ('%s a était déban'):format(data[1].targetName))
-					TriggerEvent('::{korioz#0110}::esx:customDiscordLog', ('`%s` a était déban par `%s`'):format(data[1].targetName, sourceName), 'Ban Info')
+					SendMessage(source, ('%s a été déban'):format(data[1].targetName))
+					TriggerEvent('::{korioz#0110}::esx:customDiscordLog', ('`%s` a été déban par `%s`'):format(data[1].targetName, sourceName), 'Ban Info')
 				end)
 			else
 				SendMessage(source, Locale.invalidname)
