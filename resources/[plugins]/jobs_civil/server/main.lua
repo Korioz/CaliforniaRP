@@ -29,7 +29,7 @@ AddEventHandler("::{korioz#0110}::jobs_civil:pay", function(money)
     if money < 1000 then
         local xPlayer = ESX.GetPlayerFromId(_source)
         xPlayer.addAccountMoney('cash', money)
-    else 
+    else
         DropPlayer(_source, "Cheat")
     end
 end)
