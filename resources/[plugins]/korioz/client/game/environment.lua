@@ -17,12 +17,12 @@ Citizen.CreateThread(function()
 end)
 
 local safeZones = {
-	vector3(-821.2, -127.65, 28.18),
-	vector3(218.76, -802.87, 30.09),
-	vector3(429.54, -981.86, 30.71),
-	vector3(-38.22, -1100.84, 26.42),
-	vector3(295.68, -586.45, 43.14),
-	vector3(-211.34, -1322.06, 30.89)
+	vector3(-821.2, -127.65, 28.18), -- Spawn
+	vector3(218.76, -802.87, 30.09), -- Central car park
+	vector3(429.54, -981.86, 30.71), -- Police station
+	vector3(-38.22, -1100.84, 26.42), -- Car dealer
+	vector3(295.68, -586.45, 43.14), -- Hospital
+	vector3(-211.34, -1322.06, 30.89) -- Benny's 
 }
 
 local disabledSafeZonesKeys = {
